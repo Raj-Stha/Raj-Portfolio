@@ -47,6 +47,8 @@
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
+  --theme-primary: oklch(55.56 0.92 337.23);
+  --theme-secondary: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
@@ -116,6 +118,12 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    .theme-primary {
+      color: var(--theme-primary);
+    }
+    .theme-secondary {
+      color: var(--theme-secondary);
+    }
   }
   body {
     @apply bg-background text-foreground;
